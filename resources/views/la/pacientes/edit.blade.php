@@ -33,6 +33,7 @@
 					@la_form($module)
 					
 					{{--
+					@la_input($module, 'status')
 					@la_input($module, 'nombre_de_paciente')
 					@la_input($module, 'codigo_de_paciente')
 					@la_input($module, 'paciente_carrera')

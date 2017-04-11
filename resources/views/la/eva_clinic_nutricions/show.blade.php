@@ -1,7 +1,7 @@
 @extends('la.layouts.app')
 
 @section('htmlheader_title')
-	Paciente View
+	Eva clinic nutricion View
 @endsection
 
 
@@ -15,7 +15,7 @@
 					<div class="profile-icon text-primary"><i class="fa {{ $module->fa_icon }}"></i></div>
 				</div>
 				<div class="col-md-9">
-					<h4 class="name">{{ $paciente->$view_col }}</h4>
+					<h4 class="name">{{ $eva_clinic_nutricion->$view_col }}</h4>
 					<div class="row stats">
 						<div class="col-md-4"><i class="fa fa-facebook"></i> 234</div>
 						<div class="col-md-4"><i class="fa fa-twitter"></i> 12</div>
@@ -81,12 +81,12 @@
 			</div>
 		</div>
 		<div class="col-md-1 actions">
-			@la_access("Pacientes", "edit")
-				<a href="{{ url(config('laraadmin.adminRoute') . '/pacientes/'.$paciente->id.'/edit') }}" class="btn btn-xs btn-edit btn-default"><i class="fa fa-pencil"></i></a><br>
+			@la_access("Eva_clinic_nutricions", "edit")
+				<a href="{{ url(config('laraadmin.adminRoute') . '/eva_clinic_nutricions/'.$eva_clinic_nutricion->id.'/edit') }}" class="btn btn-xs btn-edit btn-default"><i class="fa fa-pencil"></i></a><br>
 			@endla_access
 			
-			@la_access("Pacientes", "delete")
-				{{ Form::open(['route' => [config('laraadmin.adminRoute') . '.pacientes.destroy', $paciente->id], 'method' => 'delete', 'style'=>'display:inline']) }}
+			@la_access("Eva_clinic_nutricions", "delete")
+				{{ Form::open(['route' => [config('laraadmin.adminRoute') . '.eva_clinic_nutricions.destroy', $eva_clinic_nutricion->id], 'method' => 'delete', 'style'=>'display:inline']) }}
 					<button class="btn btn-default btn-delete btn-xs" type="submit"><i class="fa fa-times"></i></button>
 				{{ Form::close() }}
 			@endla_access
@@ -94,7 +94,7 @@
 	</div>
 
 	<ul data-toggle="ajax-tab" class="nav nav-tabs profile" role="tablist">
-		<li class=""><a href="{{ url(config('laraadmin.adminRoute') . '/pacientes') }}" data-toggle="tooltip" data-placement="right" title="Back to Pacientes"><i class="fa fa-chevron-left"></i></a></li>
+		<li class=""><a href="{{ url(config('laraadmin.adminRoute') . '/eva_clinic_nutricions') }}" data-toggle="tooltip" data-placement="right" title="Back to Eva clinic nutricions"><i class="fa fa-chevron-left"></i></a></li>
 		<li class="active"><a role="tab" data-toggle="tab" class="active" href="#tab-general-info" data-target="#tab-info"><i class="fa fa-bars"></i> General Info</a></li>
 		<li class=""><a role="tab" data-toggle="tab" href="#tab-timeline" data-target="#tab-timeline"><i class="fa fa-clock-o"></i> Timeline</a></li>
 	</ul>
@@ -107,10 +107,24 @@
 						<h4>General Info</h4>
 					</div>
 					<div class="panel-body">
-						@la_display($module, 'status')
-						@la_display($module, 'nombre_de_paciente')
-						@la_display($module, 'codigo_de_paciente')
-						@la_display($module, 'paciente_carrera')
+						@la_display($module, 'tiempo_comida_dia')
+						@la_display($module, 'comidas_fuera_casa')
+						@la_display($module, 'bebidas_frecuentes')
+						@la_display($module, 'sal_extra')
+						@la_display($module, 'problemas_dentales')
+						@la_display($module, 'hora_mayor_apetito')
+						@la_display($module, 'dieta')
+						@la_display($module, 'tipo_dieta')
+						@la_display($module, 'tiempo_dieta')
+						@la_display($module, 'motivo_dieta')
+						@la_display($module, 'obtuvo_resultados')
+						@la_display($module, 'consume_alcohol')
+						@la_display($module, 'frecuencia_consumo')
+						@la_display($module, 'tiempo_duerme')
+						@la_display($module, 'consumo_agua')
+						@la_display($module, 'act_fisica')
+						@la_display($module, 'frecuencia_actividad')
+						@la_display($module, 'tipo_actividad')
 					</div>
 				</div>
 			</div>

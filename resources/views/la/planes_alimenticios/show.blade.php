@@ -1,7 +1,7 @@
 @extends('la.layouts.app')
 
 @section('htmlheader_title')
-	Paciente View
+	Planes Alimenticio View
 @endsection
 
 
@@ -15,7 +15,7 @@
 					<div class="profile-icon text-primary"><i class="fa {{ $module->fa_icon }}"></i></div>
 				</div>
 				<div class="col-md-9">
-					<h4 class="name">{{ $paciente->$view_col }}</h4>
+					<h4 class="name">{{ $planes_alimenticio->$view_col }}</h4>
 					<div class="row stats">
 						<div class="col-md-4"><i class="fa fa-facebook"></i> 234</div>
 						<div class="col-md-4"><i class="fa fa-twitter"></i> 12</div>
@@ -81,12 +81,12 @@
 			</div>
 		</div>
 		<div class="col-md-1 actions">
-			@la_access("Pacientes", "edit")
-				<a href="{{ url(config('laraadmin.adminRoute') . '/pacientes/'.$paciente->id.'/edit') }}" class="btn btn-xs btn-edit btn-default"><i class="fa fa-pencil"></i></a><br>
+			@la_access("Planes_Alimenticios", "edit")
+				<a href="{{ url(config('laraadmin.adminRoute') . '/planes_alimenticios/'.$planes_alimenticio->id.'/edit') }}" class="btn btn-xs btn-edit btn-default"><i class="fa fa-pencil"></i></a><br>
 			@endla_access
 			
-			@la_access("Pacientes", "delete")
-				{{ Form::open(['route' => [config('laraadmin.adminRoute') . '.pacientes.destroy', $paciente->id], 'method' => 'delete', 'style'=>'display:inline']) }}
+			@la_access("Planes_Alimenticios", "delete")
+				{{ Form::open(['route' => [config('laraadmin.adminRoute') . '.planes_alimenticios.destroy', $planes_alimenticio->id], 'method' => 'delete', 'style'=>'display:inline']) }}
 					<button class="btn btn-default btn-delete btn-xs" type="submit"><i class="fa fa-times"></i></button>
 				{{ Form::close() }}
 			@endla_access
@@ -94,7 +94,7 @@
 	</div>
 
 	<ul data-toggle="ajax-tab" class="nav nav-tabs profile" role="tablist">
-		<li class=""><a href="{{ url(config('laraadmin.adminRoute') . '/pacientes') }}" data-toggle="tooltip" data-placement="right" title="Back to Pacientes"><i class="fa fa-chevron-left"></i></a></li>
+		<li class=""><a href="{{ url(config('laraadmin.adminRoute') . '/planes_alimenticios') }}" data-toggle="tooltip" data-placement="right" title="Back to Planes Alimenticios"><i class="fa fa-chevron-left"></i></a></li>
 		<li class="active"><a role="tab" data-toggle="tab" class="active" href="#tab-general-info" data-target="#tab-info"><i class="fa fa-bars"></i> General Info</a></li>
 		<li class=""><a role="tab" data-toggle="tab" href="#tab-timeline" data-target="#tab-timeline"><i class="fa fa-clock-o"></i> Timeline</a></li>
 	</ul>
@@ -107,10 +107,51 @@
 						<h4>General Info</h4>
 					</div>
 					<div class="panel-body">
-						@la_display($module, 'status')
-						@la_display($module, 'nombre_de_paciente')
-						@la_display($module, 'codigo_de_paciente')
-						@la_display($module, 'paciente_carrera')
+						@la_display($module, 'verduras_desayuno')
+						@la_display($module, 'verduras_colacion')
+						@la_display($module, 'verduras_comida')
+						@la_display($module, 'verura_colacion_tar')
+						@la_display($module, 'verduras_cena')
+						@la_display($module, 'frutas_desayuno')
+						@la_display($module, 'frutas_colacion_man')
+						@la_display($module, 'frutas_comida')
+						@la_display($module, 'frutas_colacion_tar')
+						@la_display($module, 'frutas_cena')
+						@la_display($module, 'cereales_desayuno')
+						@la_display($module, 'cerales_colacion_man')
+						@la_display($module, 'cereales_comida')
+						@la_display($module, 'cereal_colacion_tar')
+						@la_display($module, 'cereales_cena')
+						@la_display($module, 'desayuno_leguminosas')
+						@la_display($module, 'leguminosas_colacion')
+						@la_display($module, 'leguminosas_comida')
+						@la_display($module, 'leguminosasColacionT')
+						@la_display($module, 'leguminosas_cena')
+						@la_display($module, 'AoA_desayuno')
+						@la_display($module, 'AoA_colacion_man')
+						@la_display($module, 'AoA_comida')
+						@la_display($module, 'AoA_colacion_tar')
+						@la_display($module, 'AoA_cena')
+						@la_display($module, 'leche_desayuno')
+						@la_display($module, 'leche_desayuno_man')
+						@la_display($module, 'leche_comida')
+						@la_display($module, 'leche_colacion_tar')
+						@la_display($module, 'leche_cena')
+						@la_display($module, 'aceites_A_dasayuno')
+						@la_display($module, 'aceites_A_colacion_m')
+						@la_display($module, 'aceites_A_comida')
+						@la_display($module, 'aceites_A_colacion_t')
+						@la_display($module, 'aceites_A_cena')
+						@la_display($module, 'aceites_B_dasayuno')
+						@la_display($module, 'aceites_B_colacion_m')
+						@la_display($module, 'aceites_B_comida')
+						@la_display($module, 'aceites_B_colacion_t')
+						@la_display($module, 'aceites_B_cena')
+						@la_display($module, 'azucares_desayuno')
+						@la_display($module, 'azucares_colacion_m')
+						@la_display($module, 'azucares_comida')
+						@la_display($module, 'azucares_colacion_t')
+						@la_display($module, 'azucares_cena')
 					</div>
 				</div>
 			</div>

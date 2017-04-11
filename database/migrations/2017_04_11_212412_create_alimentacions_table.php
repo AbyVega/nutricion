@@ -8,7 +8,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
 
-class CreatePacientesTable extends Migration
+class CreateAlimentacionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,11 +17,19 @@ class CreatePacientesTable extends Migration
      */
     public function up()
     {
-        Module::generate("Pacientes", 'pacientes', 'paciente_carrera', 'fa-optin-monster', [
-            ["status", "Status", "Radio", false, "", 0, 0, true, ["Activo","Baja"]],
-            ["nombre_de_paciente", "Nombre", "TextField", false, "nombre", 5, 15, true],
-            ["codigo_de_paciente", "Codigo", "TextField", false, "codigo", 9, 9, true],
-            ["paciente_carrera", "nombre de la carrera", "Multiselect", false, "Seleccione Carrera", 0, 0, true, "@carreras"],
+        Module::generate("Alimentacions", 'alimentacions', 'alimentos_agradan', 'fa-cube', [
+            ["alimentos_agradan", "alimentos agradan", "TextField", false, "", 0, 256, true],
+            ["alimentos_no_agradan", "alimentos no agradan", "TextField", false, "", 0, 256, true],
+            ["consumo_verduras", "consumo de verduras", "Multiselect", false, "", 0, 0, true, ["Diario","Cada tercer dia","Una vez por semana","Una vez al mes","Nunca"]],
+            ["consumo_frutas", "consumo de frutas", "Multiselect", false, "", 0, 0, true, ["Diario","Cada tercer dia","Una vez a la semana","Una vez al mes","Nunca"]],
+            ["consumo _leguminosas", "consumo  leguminosas", "Multiselect", false, "", 0, 0, true, ["Diario","Cada tercer dia","Una vez por semana","Una vez al mes","Nunca"]],
+            ["Cosumo_cereales", "cereales tuberculos", "Multiselect", false, "", 0, 0, true, ["Diario","Cada tercer dia","Una vez por semena","Una vez al mes","Nunca"]],
+            ["consumo_carne", "consumo carne", "Multiselect", false, "", 0, 0, true, ["Diario","Cada tercer dia","Una vez por semena","Una ves al mes","Nunca"]],
+            ["consumo_mariscos", "consumo mariscos", "Multiselect", false, "", 0, 0, true, ["Diario","Cada tercer dia","Una vez por semena","Una vez al mes","Nunca"]],
+            ["consumo_lacteos", "consumo lacteos", "Multiselect", false, "", 0, 0, true, ["Diario","Cada tercer dia","Una vez por semana","Una vez al mes","Nunca"]],
+            ["consumo_embutidos", "consumo embutidos", "Multiselect", false, "", 0, 0, true, ["Diario","Cada tercer dia","Una vez por semana","Una vez al mes","Nunca"]],
+            ["consumo_grasas", "grasa y azucares", "Multiselect", false, "", 0, 0, true, ["Diario","Cada tercer dia","Una vez por semana","Una vez al mes","Nunca"]],
+            ["alimentos_procesados", "alimentos procesados", "Multiselect", false, "", 0, 0, true, ["Diario","Cada tercer dia","Una vez por semana","Una vez al mes","Nunca"]],
         ]);
 		
 		/*
@@ -67,8 +75,8 @@ class CreatePacientesTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('pacientes')) {
-            Schema::drop('pacientes');
+        if (Schema::hasTable('alimentacions')) {
+            Schema::drop('alimentacions');
         }
     }
 }

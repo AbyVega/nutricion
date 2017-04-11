@@ -1,14 +1,14 @@
 @extends("la.layouts.app")
 
-@section("contentheader_title", "Pacientes")
-@section("contentheader_description", "Pacientes listing")
-@section("section", "Pacientes")
+@section("contentheader_title", "Alimentacions")
+@section("contentheader_description", "Alimentacions listing")
+@section("section", "Alimentacions")
 @section("sub_section", "Listing")
-@section("htmlheader_title", "Pacientes Listing")
+@section("htmlheader_title", "Alimentacions Listing")
 
 @section("headerElems")
-@la_access("Pacientes", "create")
-	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Paciente</button>
+@la_access("Alimentacions", "create")
+	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Alimentacion</button>
 @endla_access
 @endsection
 
@@ -45,24 +45,32 @@
 	</div>
 </div>
 
-@la_access("Pacientes", "create")
+@la_access("Alimentacions", "create")
 <div class="modal fade" id="AddModal" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Add Paciente</h4>
+				<h4 class="modal-title" id="myModalLabel">Add Alimentacion</h4>
 			</div>
-			{!! Form::open(['action' => 'LA\PacientesController@store', 'id' => 'paciente-add-form']) !!}
+			{!! Form::open(['action' => 'LA\AlimentacionsController@store', 'id' => 'alimentacion-add-form']) !!}
 			<div class="modal-body">
 				<div class="box-body">
                     @la_form($module)
 					
 					{{--
-					@la_input($module, 'status')
-					@la_input($module, 'nombre_de_paciente')
-					@la_input($module, 'codigo_de_paciente')
-					@la_input($module, 'paciente_carrera')
+					@la_input($module, 'alimentos_agradan')
+					@la_input($module, 'alimentos_no_agradan')
+					@la_input($module, 'consumo_verduras')
+					@la_input($module, 'consumo_frutas')
+					@la_input($module, 'consumo _leguminosas')
+					@la_input($module, 'Cosumo_cereales')
+					@la_input($module, 'consumo_carne')
+					@la_input($module, 'consumo_mariscos')
+					@la_input($module, 'consumo_lacteos')
+					@la_input($module, 'consumo_embutidos')
+					@la_input($module, 'consumo_grasas')
+					@la_input($module, 'alimentos_procesados')
 					--}}
 				</div>
 			</div>
@@ -89,7 +97,7 @@ $(function () {
 	$("#example1").DataTable({
 		processing: true,
         serverSide: true,
-        ajax: "{{ url(config('laraadmin.adminRoute') . '/paciente_dt_ajax') }}",
+        ajax: "{{ url(config('laraadmin.adminRoute') . '/alimentacion_dt_ajax') }}",
 		language: {
 			lengthMenu: "_MENU_",
 			search: "_INPUT_",
@@ -99,7 +107,7 @@ $(function () {
 		columnDefs: [ { orderable: false, targets: [-1] }],
 		@endif
 	});
-	$("#paciente-add-form").validate({
+	$("#alimentacion-add-form").validate({
 		
 	});
 });

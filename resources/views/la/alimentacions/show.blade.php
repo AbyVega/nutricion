@@ -1,7 +1,7 @@
 @extends('la.layouts.app')
 
 @section('htmlheader_title')
-	Paciente View
+	Alimentacion View
 @endsection
 
 
@@ -15,7 +15,7 @@
 					<div class="profile-icon text-primary"><i class="fa {{ $module->fa_icon }}"></i></div>
 				</div>
 				<div class="col-md-9">
-					<h4 class="name">{{ $paciente->$view_col }}</h4>
+					<h4 class="name">{{ $alimentacion->$view_col }}</h4>
 					<div class="row stats">
 						<div class="col-md-4"><i class="fa fa-facebook"></i> 234</div>
 						<div class="col-md-4"><i class="fa fa-twitter"></i> 12</div>
@@ -81,12 +81,12 @@
 			</div>
 		</div>
 		<div class="col-md-1 actions">
-			@la_access("Pacientes", "edit")
-				<a href="{{ url(config('laraadmin.adminRoute') . '/pacientes/'.$paciente->id.'/edit') }}" class="btn btn-xs btn-edit btn-default"><i class="fa fa-pencil"></i></a><br>
+			@la_access("Alimentacions", "edit")
+				<a href="{{ url(config('laraadmin.adminRoute') . '/alimentacions/'.$alimentacion->id.'/edit') }}" class="btn btn-xs btn-edit btn-default"><i class="fa fa-pencil"></i></a><br>
 			@endla_access
 			
-			@la_access("Pacientes", "delete")
-				{{ Form::open(['route' => [config('laraadmin.adminRoute') . '.pacientes.destroy', $paciente->id], 'method' => 'delete', 'style'=>'display:inline']) }}
+			@la_access("Alimentacions", "delete")
+				{{ Form::open(['route' => [config('laraadmin.adminRoute') . '.alimentacions.destroy', $alimentacion->id], 'method' => 'delete', 'style'=>'display:inline']) }}
 					<button class="btn btn-default btn-delete btn-xs" type="submit"><i class="fa fa-times"></i></button>
 				{{ Form::close() }}
 			@endla_access
@@ -94,7 +94,7 @@
 	</div>
 
 	<ul data-toggle="ajax-tab" class="nav nav-tabs profile" role="tablist">
-		<li class=""><a href="{{ url(config('laraadmin.adminRoute') . '/pacientes') }}" data-toggle="tooltip" data-placement="right" title="Back to Pacientes"><i class="fa fa-chevron-left"></i></a></li>
+		<li class=""><a href="{{ url(config('laraadmin.adminRoute') . '/alimentacions') }}" data-toggle="tooltip" data-placement="right" title="Back to Alimentacions"><i class="fa fa-chevron-left"></i></a></li>
 		<li class="active"><a role="tab" data-toggle="tab" class="active" href="#tab-general-info" data-target="#tab-info"><i class="fa fa-bars"></i> General Info</a></li>
 		<li class=""><a role="tab" data-toggle="tab" href="#tab-timeline" data-target="#tab-timeline"><i class="fa fa-clock-o"></i> Timeline</a></li>
 	</ul>
@@ -107,10 +107,18 @@
 						<h4>General Info</h4>
 					</div>
 					<div class="panel-body">
-						@la_display($module, 'status')
-						@la_display($module, 'nombre_de_paciente')
-						@la_display($module, 'codigo_de_paciente')
-						@la_display($module, 'paciente_carrera')
+						@la_display($module, 'alimentos_agradan')
+						@la_display($module, 'alimentos_no_agradan')
+						@la_display($module, 'consumo_verduras')
+						@la_display($module, 'consumo_frutas')
+						@la_display($module, 'consumo _leguminosas')
+						@la_display($module, 'Cosumo_cereales')
+						@la_display($module, 'consumo_carne')
+						@la_display($module, 'consumo_mariscos')
+						@la_display($module, 'consumo_lacteos')
+						@la_display($module, 'consumo_embutidos')
+						@la_display($module, 'consumo_grasas')
+						@la_display($module, 'alimentos_procesados')
 					</div>
 				</div>
 			</div>

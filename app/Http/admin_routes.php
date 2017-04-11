@@ -86,4 +86,16 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Pacientes ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/pacientes', 'LA\PacientesController');
 	Route::get(config('laraadmin.adminRoute') . '/paciente_dt_ajax', 'LA\PacientesController@dtajax');
+
+	/* ================== Eva_clinic_nutricions ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/eva_clinic_nutricions', 'LA\Eva_clinic_nutricionsController');
+	Route::get(config('laraadmin.adminRoute') . '/eva_clinic_nutricion_dt_ajax', 'LA\Eva_clinic_nutricionsController@dtajax');
+
+	/* ================== Alimentacions ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/alimentacions', 'LA\AlimentacionsController');
+	Route::get(config('laraadmin.adminRoute') . '/alimentacion_dt_ajax', 'LA\AlimentacionsController@dtajax');
+
+	/* ================== Planes_Alimenticios ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/planes_alimenticios', 'LA\Planes_AlimenticiosController');
+	Route::get(config('laraadmin.adminRoute') . '/planes_alimenticio_dt_ajax', 'LA\Planes_AlimenticiosController@dtajax');
 });

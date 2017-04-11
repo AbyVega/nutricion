@@ -8,7 +8,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
 
-class CreatePacientesTable extends Migration
+class CreateEvaClinicNutricionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,11 +17,25 @@ class CreatePacientesTable extends Migration
      */
     public function up()
     {
-        Module::generate("Pacientes", 'pacientes', 'paciente_carrera', 'fa-optin-monster', [
-            ["status", "Status", "Radio", false, "", 0, 0, true, ["Activo","Baja"]],
-            ["nombre_de_paciente", "Nombre", "TextField", false, "nombre", 5, 15, true],
-            ["codigo_de_paciente", "Codigo", "TextField", false, "codigo", 9, 9, true],
-            ["paciente_carrera", "nombre de la carrera", "Multiselect", false, "Seleccione Carrera", 0, 0, true, "@carreras"],
+        Module::generate("Eva_clinic_nutricions", 'eva_clinic_nutricions', 'tiempo_comida_dia', 'fa-cube', [
+            ["tiempo_comida_dia", "Tiempos  comida dia", "TextField", false, "8 horas", 50, 200, true],
+            ["comidas_fuera_casa", "comidas fuera casa", "Multiselect", false, "", 0, 256, true, ["De 1 a 2 veces por semana","De 3 a 4 veces por semana","De 5 a 6 veces por semana","Mas de 7 veces por semana","Ninguna vez"]],
+            ["bebidas_frecuentes", "bebidas  frecuentes", "Multiselect", false, "", 0, 0, true, ["Refrescos","Jugos Naturales","Jugos Artificiales","Bebidas Alcoholicas","Agua Natural"]],
+            ["sal_extra", "Agregas sal extra", "Radio", false, "No", 0, 0, true, ["Si","No"]],
+            ["problemas_dentales", "problemas dentales", "Radio", false, "No", 0, 0, true, ["SI","No"]],
+            ["hora_mayor_apetito", "hora mayor apetito", "TextField", false, "", 0, 256, true],
+            ["dieta", "has estado en dieta", "Radio", false, "", 0, 0, true, ["Si","No"]],
+            ["tipo_dieta", "tipo de dieta", "TextField", false, "", 0, 256, true],
+            ["tiempo_dieta", "cuandoYcuanto tiempo", "TextField", false, "", 0, 256, true],
+            ["motivo_dieta", "porque inicio dieta", "TextField", false, "bajar de peso", 0, 256, true],
+            ["obtuvo_resultados", "obtuvo resultados", "Radio", false, "Si", 0, 0, true, ["Si","No"]],
+            ["consume_alcohol", "consume alcohol ", "Radio", false, "No", 0, 0, true, ["Si","No"]],
+            ["frecuencia_consumo", "frecuencia consumo", "Multiselect", false, "", 0, 0, true, ["De 1 a 2 veces por semana","De 3 a 4 veces por semana","De 5 a 6 veces por semana","Mas de 7 veces por semana"]],
+            ["tiempo_duerme", "tiempo que duerme", "Multiselect", false, "Tiempo que duerme", 0, 0, true, ["De 3 a 6 horas","De 5 a 8 horas","De 6 a 10 horas","Mas de 10 horas","Menos de 3 horas"]],
+            ["consumo_agua", "consumo agua", "Multiselect", false, "", 0, 0, true, ["De 1 a 3 vasos","De 5 a 6 vasos","De 7 a 9 vasos","Mas de 10 vasos","Menos de 1 vaso"]],
+            ["act_fisica", "actividad fisica", "Radio", false, "", 0, 0, true, ["Si","No"]],
+            ["frecuencia_actividad", "frecuencia actividad", "Multiselect", false, "", 0, 0, true, ["De 1 a 3 veces por semana","De 4 a 6 veces por semana","Mas de 7 veces por semana"]],
+            ["tipo_actividad", "tipo actividad", "Multiselect", false, "", 0, 0, true, ["Correr","Caminar","GYM","Natacion","Zumba","Otras"]],
         ]);
 		
 		/*
@@ -67,8 +81,8 @@ class CreatePacientesTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('pacientes')) {
-            Schema::drop('pacientes');
+        if (Schema::hasTable('eva_clinic_nutricions')) {
+            Schema::drop('eva_clinic_nutricions');
         }
     }
 }
