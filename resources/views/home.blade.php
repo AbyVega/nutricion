@@ -9,22 +9,22 @@
     <meta property="og:title" content="{{ LAConfigs::getByKey('sitename') }}" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="{{ LAConfigs::getByKey('site_description') }}" />
-    
+
     <meta property="og:url" content="http://laraadmin.com/" />
     <meta property="og:sitename" content="laraAdmin" />
 	<meta property="og:image" content="http://demo.adminlte.acacha.org/img/LaraAdmin-600x600.jpg" />
-    
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@laraadmin" />
     <meta name="twitter:creator" content="@laraadmin" />
-    
+
     <title>{{ LAConfigs::getByKey('sitename') }}</title>
-    
+
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('/la-assets/css/bootstrap.css') }}" rel="stylesheet">
 
 	<link href="{{ asset('la-assets/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
-    
+
     <!-- Custom styles for this template -->
     <link href="{{ asset('/la-assets/css/main.css') }}" rel="stylesheet">
 
@@ -52,9 +52,9 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#home" class="smoothScroll">Home</a></li>
-                <li><a href="#about" class="smoothScroll">About</a></li>
-                <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                <li class="active"><a href="#home" class="smoothScroll">Accede</a></li>
+                <!-- <li><a href="#about" class="smoothScroll">Avisos</a></li> -->
+                <li><a href="#contact" class="smoothScroll">Contáctanos</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
@@ -73,24 +73,24 @@
 <div id="headerwrap">
     <div class="container">
         <div class="row centered">
-            <div class="col-lg-12">
-                <h1>{{ LAConfigs::getByKey('sitename_part1') }} <b><a>{{ LAConfigs::getByKey('sitename_part2') }}</a></b></h1>
-                <h3>{{ LAConfigs::getByKey('site_description') }}</h3>
-                <h3><a href="{{ url('/login') }}" class="btn btn-lg btn-success">Get Started!</a></h3><br>
-            </div>
             <div class="col-lg-2">
-                <h5>Amazing Functionalities</h5>
-                <p>for Modern Admin Panels</p>
+                <h5>Ya sacaste tu cita? </h5>
+                <p>Acceso para Nutriologos</p>
                 <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/la-assets/img/arrow1.png') }}">
             </div>
             <div class="col-lg-8">
-                <img class="img-responsive" src="{{ asset('/la-assets/img/app-bg.png') }}" alt="">
+                <img src="https://scontent.fmfe1-1.fna.fbcdn.net/v/t31.0-8/s960x960/13765944_1386189598063457_419463956049950874_o.png?oh=a87a4313e534b281a9b6a8c27cf686c1&oe=593F0954"
+            height=" 400"  </img></div>
+            <div class="col-lg-12">
+                <h1>{{ LAConfigs::getByKey('sitename_part1') }} <b><a>{{ LAConfigs::getByKey('sitename_part2') }}</a></b></h1>
+                <h3>{{ LAConfigs::getByKey('site_description') }}</h3>
+                <h3><a href="{{ url('/login') }}" class="btn btn-lg btn-success">Inicia sesión</a></h3><br>
             </div>
             <div class="col-lg-2">
-                <br>
+                <!-- <br>
                 <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/la-assets/img/arrow2.png') }}">
                 <h5>Completely Packaged...</h5>
-                <p>for Future expantion of Modules</p>
+                <p>for Future expantion of Modules</p> -->
             </div>
         </div>
     </div> <!--/ .container -->
@@ -101,7 +101,7 @@
 <!-- INTRO WRAP -->
 <div id="intro">
     <div class="container">
-        <div class="row centered">
+        <!-- <div class="row centered">
             <h1>An Architecture designed To Excel</h1>
             <br>
             <br>
@@ -120,7 +120,7 @@
                 <h3>Customizable</h3>
                 <p>Easy to Manipulation the flows.</p>
             </div>
-        </div>
+        </div> -->
         <br>
         <hr>
     </div> <!--/ .container -->
@@ -135,62 +135,54 @@
             </div>
 
             <div class="col-lg-7">
-				<h3 class="feature-title">What is LaraAdmin ?</h3><br>
+				<h3 class="feature-title">Que es </h3><br>
 				<ol class="features">
-					<li><strong>CMS</strong> (Content Management System) &#8211; Manages Modules &amp; their Data</li>
-					<li>Backend <strong>Admin Panel</strong> &#8211; Data can be used in front end applications with ease.</li>
-					<li>A probable <strong>CRM</strong> System &#8211; Can be evolved into a CRM system like <a target="_blank" href="https://www.sugarcrm.com">SugarCRM</a></li>
+					<li><strong>SIN</strong> (Sistema integral de Nutrición) &#8211; Maneja tus pacientes &amp; Todos los datos en un solo lugar.</li>
+					<li>Administra <strong>Acceso al Panel Administrativo</strong> &#8211; Agrega nuevos campos facilmente.</li>
+					<li>Reportes y mas <strong>Exportacion de datos</strong> Conocer el estado &#8211; de salud de tu centro Universitario </li>
 				</ol><br>
 
-				<h3 class="feature-title">Why LaraAdmin ?</h3><br>
-                <ol class="features">
-					<li><strong>Philosophy:</strong> Inspired by SugarCRM &amp; based on Advanced <strong>Data Types</strong> like Image, HTML, File, Dropdown, TagInput which makes developers job easy. See more in <a target="_blank" href="http://laraadmin.com/features">features</a></li>
-					<li>Superior <strong>CRUD generation</strong> for Modules which generates Migration, Controller, Model and Views with single artisan command and integrates with Routes as as well.</li>
-					<li><strong>Form Maker</strong> helper is provided for generating entire form with single function call with module name as single parameter. It also gives you freedom to customise form for every field by providing method to generate single field with parameters for customisations.</li>
-					<li><b>Upload Manager </b>manages project files &amp; images which are integrated with your Module fields.</li>
-					<li><strong>Menu Manager</strong> creates menu with Modules &amp; Custom Links likes WordPress</li>
-					<li><strong>Online Code Editor</strong> allows developers to customise the generated Module Views &amp; Files.</li>
-				</ol>
-            </div>
+			
+            </div> 
         </div>
     </div><!--/ .container -->
-</div><!--/ #features -->
+</div><!--/ #features --> -->
 
 <section id="contact" name="contact"></section>
 <div id="footerwrap">
     <div class="container">
         <div class="col-lg-5">
-            <h3>Contact Us</h3><br>
+            <h3>Contáctanos</h3><br>
             <p>
-				Dwij IT Solutions,<br/>
-				Web Development Company in Pune,<br/>
-                B4, Patang Plaza Phase 5,<br/>
-                Opp. PICT College,<br/>
-                Katraj, Pune, India - 411046
+				Maestria en Ingenieria de Software,<br/>
+				Desarrollado por <br/>
+                Ing. Rogelio Jiménez Meza<br/>
+                Lic. Abigail Vega<br/>
+              Centro Universitario de los Valles
             </p>
-			<div class="contact-link"><i class="fa fa-envelope-o"></i> <a href="mailto:hello@laraadmin.com">hello@laraadmin.com</a></div>
-			<div class="contact-link"><i class="fa fa-cube"></i> <a href="http://laraadmin.com">laraadmin.com</a></div>
-			<div class="contact-link"><i class="fa fa-building"></i> <a href="http://dwijitsolutions.com">dwijitsolutions.com</a></div>
+			<div class="contact-link"><i class="fa fa-envelope-o"></i> <a href="mailto:rogelio.jimenez@alumno.udg.mx">rogelio.jimenez@alumno.udg.mx</a></div>
+			<!-- <div class="contact-link"><i class="fa fa-cube"></i> <a href="http://laraadmin.com">laraadmin.com</a></div>
+			<div class="contact-link"><i class="fa fa-building"></i> <a href="http://dwijitsolutions.com">dwijitsolutions.com</a></div> -->
         </div>
 
         <div class="col-lg-7">
-            <h3>Drop Us A Line</h3>
+            <h3>Te gusto o tienes problemas con este sistema? Dejanos un mensaje</h3>
             <br>
             <form role="form" action="#" method="post" enctype="plain">
                 <div class="form-group">
-                    <label for="name1">Your Name</label>
+                    <label for="name1">Nombre</label>
                     <input type="name" name="Name" class="form-control" id="name1" placeholder="Your Name">
                 </div>
                 <div class="form-group">
-                    <label for="email1">Email address</label>
+                    <label for="email1">Correo</label>
                     <input type="email" name="Mail" class="form-control" id="email1" placeholder="Enter email">
                 </div>
                 <div class="form-group">
-                    <label>Your Text</label>
+                    <label>Mensaje</label>
                     <textarea class="form-control" name="Message" rows="3"></textarea>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-large btn-success">SUBMIT</button>
+                <button type="submit" class="btn btn-large btn-success">Enviar</button>
             </form>
         </div>
     </div>
@@ -198,7 +190,7 @@
 <div id="c">
     <div class="container">
         <p>
-            <strong>Copyright &copy; 2016. Powered by <a href="https://dwijitsolutions.com"><b>Dwij IT Solutions</b></a>
+            <strong>Copyright &copy; 2016. Powered by <a href="http://www.servermis.cuvalles.udg.mx"><b>Maestria en Ingenieria de Software</b></a>
         </p>
     </div>
 </div>

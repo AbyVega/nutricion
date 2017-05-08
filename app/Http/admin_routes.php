@@ -86,4 +86,8 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Pacientes ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/pacientes', 'LA\PacientesController');
 	Route::get(config('laraadmin.adminRoute') . '/paciente_dt_ajax', 'LA\PacientesController@dtajax');
+
+	/* ================== Historia_clinicas ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/historia_clinicas', 'LA\Historia_clinicasController');
+	Route::get(config('laraadmin.adminRoute') . '/historia_clinica_dt_ajax', 'LA\Historia_clinicasController@dtajax');
 });
