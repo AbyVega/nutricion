@@ -74,17 +74,16 @@
     <div class="container">
         <div class="row centered">
             <div class="col-lg-2">
-                <h5>Ya sacaste tu cita? </h5>
-                <p>Acceso para Nutriologos</p>
-                <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/la-assets/img/arrow1.png') }}">
+               
+                <p></p> 
             </div>
             <div class="col-lg-8">
-                <img src="https://scontent.fmfe1-1.fna.fbcdn.net/v/t31.0-8/s960x960/13765944_1386189598063457_419463956049950874_o.png?oh=a87a4313e534b281a9b6a8c27cf686c1&oe=593F0954"
-            height=" 400"  </img></div>
+                <img src="{{ asset('/la-assets/img/nutricion.png') }}"
+            height=" 200"  </img></div>
             <div class="col-lg-12">
                 <h1>{{ LAConfigs::getByKey('sitename_part1') }} <b><a>{{ LAConfigs::getByKey('sitename_part2') }}</a></b></h1>
                 <h3>{{ LAConfigs::getByKey('site_description') }}</h3>
-                <h3><a href="{{ url('/login') }}" class="btn btn-lg btn-success">Inicia sesión</a></h3><br>
+                <h3><a href="{{ url('/admin') }}" class="btn btn-lg btn-success">Inicia sesión</a></h3><br>
             </div>
             <div class="col-lg-2">
                 <!-- <br>
@@ -100,30 +99,7 @@
 <section id="about" name="about"></section>
 <!-- INTRO WRAP -->
 <div id="intro">
-    <div class="container">
-        <!-- <div class="row centered">
-            <h1>An Architecture designed To Excel</h1>
-            <br>
-            <br>
-            <div class="col-lg-4">
-                <i class="fa fa-cubes" style="font-size:100px;height:110px;"></i>
-                <h3>Modular</h3>
-                <p>Making Data Management fast and enjoyable.</p>
-            </div>
-            <div class="col-lg-4">
-                <i class="fa fa-paper-plane" style="font-size:100px;height:110px;"></i>
-                <h3>Easy to Install</h3>
-                <p>With single installation command.</p>
-            </div>
-            <div class="col-lg-4">
-                <i class="fa fa-cubes" style="font-size:100px;height:110px;"></i>
-                <h3>Customizable</h3>
-                <p>Easy to Manipulation the flows.</p>
-            </div>
-        </div> -->
-        <br>
-        <hr>
-    </div> <!--/ .container -->
+    
 </div><!--/ #introwrap -->
 
 <!-- FEATURES WRAP -->
@@ -137,9 +113,9 @@
             <div class="col-lg-7">
 				<h3 class="feature-title">Que es </h3><br>
 				<ol class="features">
-					<li><strong>SIN</strong> (Sistema integral de Nutrición) &#8211; Maneja tus pacientes &amp; Todos los datos en un solo lugar.</li>
-					<li>Administra <strong>Acceso al Panel Administrativo</strong> &#8211; Agrega nuevos campos facilmente.</li>
-					<li>Reportes y mas <strong>Exportacion de datos</strong> Conocer el estado &#8211; de salud de tu centro Universitario </li>
+					<li><strong>SIN</strong> (Sistema integral de Nutrición) &#8211; Maneja tus pacientes  Todos los datos en un solo lugar.</li>
+					<li>Administra: <strong>Acceso al Panel Administrativo</strong> &#8211; </li>
+					<li>Reportes y más: <strong>Exportación de datos</strong> Conocer el estado &#8211; de salud de tu centro Universitario </li>
 				</ol><br>
 
 			
@@ -166,7 +142,7 @@
         </div>
 
         <div class="col-lg-7">
-            <h3>Te gusto o tienes problemas con este sistema? Dejanos un mensaje</h3>
+           <!-- <h3>¿Te gusto o tienes problemas con este sistema? Déjanos un mensaje.</h3>
             <br>
             <form role="form" action="#" method="post" enctype="plain">
                 <div class="form-group">
@@ -183,7 +159,7 @@
                 </div>
                 <br>
                 <button type="submit" class="btn btn-large btn-success">Enviar</button>
-            </form>
+            </form> -->
         </div>
     </div>
 </div>

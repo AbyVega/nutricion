@@ -17,14 +17,15 @@ class CreateAntePatologicosTable extends Migration
      */
     public function up()
     {
-        Module::generate("Ante_patologicos", 'ante_patologicos', 'enfermedades_impor', 'fa-500px', [
+        Module::generate("Ante_patologicos", 'ante_patologicos', 'codigo_paciente', 'fa-500px', [
+            ["codigo_paciente", "Codigo", "Dropdown", false, "", 0, 0, true, "@pacientes"],
             ["enfermedades_impor", "enfermedades_impor", "TextField", false, "ninguna", 0, 100, true],
             ["alergias", "alergias", "TextField", false, "alergias", 0, 100, true],
             ["quirurgico", "quirurgico", "Checkbox", false, "quirurgico", 0, 0, true],
             ["farmacos_suplementos", "farmacos_suplementos", "Radio", false, "si", 0, 0, true, ["si","no","en ocaciones"]],
             ["transtornos", "transtornos", "Multiselect", false, "anorexia", 0, 0, true, ["anorexia","bulimia"]],
-            ["cronico_hereditario", "cronico_hereditario", "Radio", false, "", 0, 0, true, ["diabetes","cancer","HTA","hipercolesterolemia","enf.cardiovasculares"]],
-            ["gastrointestinal", "gastrointestinal", "Radio", false, "", 0, 0, true, ["nauseas y vomito","diarrea","estrenimiento","empleo de laxantes","flatulencias","gastritis","colitis","ulcera","pirosis","uso de antiacidos"]],
+            ["cronico_hereditario", "cronico_hereditario", "Multiselect", false, "", 0, 0, true, ["diabetes","cancer","HTA","hipercolesterolemia","enf.cardiovasculares"]],
+            ["gastrointestinal", "gastrointestinal", "Multiselect", false, "", 0, 0, true, ["nauseas y vomito","diarrea","estrenimiento","empleo de laxantes","flatulencias","gastritis","colitis","ulcera","pirosis","uso de antiacidos"]],
         ]);
 		
 		/*

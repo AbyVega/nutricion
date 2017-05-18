@@ -62,6 +62,15 @@
 					@la_input($module, 'nombre_de_paciente')
 					@la_input($module, 'codigo_de_paciente')
 					@la_input($module, 'paciente_carrera')
+					@la_input($module, 'fecha_inicio_pacien')
+					@la_input($module, 'sexo')
+					@la_input($module, 'edad')
+					@la_input($module, 'fecha_nacimiento')
+					@la_input($module, 'lugar_nacimiento')
+					@la_input($module, 'domicilio_actual')
+					@la_input($module, 'estado_civil')
+					@la_input($module, 'correo')
+					@la_input($module, 'celular')
 					--}}
 				</div>
 			</div>
@@ -90,9 +99,30 @@ $(function () {
         serverSide: true,
         ajax: "{{ url(config('laraadmin.adminRoute') . '/paciente_dt_ajax') }}",
 		language: {
-			lengthMenu: "_MENU_",
-			search: "_INPUT_",
-			searchPlaceholder: "Search"
+    				lengthMenu: "_MENU_",
+    				search: "_INPUT_",
+    				searchPlaceholder: "Buscar",
+    				emptyTable: "No hay registros",
+    				info: "Mostrando desde _START_ hasta _END_ de _TOTAL_ registros",
+    				infoEmpty: "Mostrando desde 0 hasta 0 de 0 registros",
+    				infoFiltered: "(filtrado de un total de _MAX_ registros)",
+    				infoPostFix: "",
+    				thousands: ",",
+    				lengthMenu: "Mostrar los _MENU_ registros",
+    				loadingRecords: "Cargando...",
+    				processing: "Procesando...",
+    				zeroRecords: "No se encontraron coincidencias",
+    				paginate: {
+    						first: "Primero",
+    						last: "&Uacute;ltimo",
+    						next: "Siguiente",
+    						previous: "Anterior"
+    				},
+    				aria: {
+    						sortAscending: ": activar para ordenar la columna de manera ascendente",
+    						sortDescending: ": activar para ordenar la columna de manera descendente"
+							}
+							
 		},
 		@if($show_actions)
 		columnDefs: [ { orderable: false, targets: [-1] }],

@@ -33,6 +33,7 @@
 					@la_form($module)
 					
 					{{--
+					@la_input($module, 'codigo_paciente')
 					@la_input($module, 'enfermedades_impor')
 					@la_input($module, 'alergias')
 					@la_input($module, 'quirurgico')

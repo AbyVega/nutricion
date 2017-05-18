@@ -23,7 +23,7 @@ class Evalu_antropometricasController extends Controller
 {
 	public $show_action = true;
 	public $view_col = 'fache';
-	public $listing_cols = ['id', 'fache', 'talla', 'peso', 'circ_abdominal', 'cintura', 'cadera', 'musculo', 'viseral', 'act_fisica', 'pcb', 'pct', 'cmb', 'pcse', 'pcsi', 'grasa_corporal', 'agua', 'kcal', 'imc', 'comentarios'];
+	public $listing_cols = ['id', 'codigo_paciente', 'fache', 'talla', 'peso', 'circ_abdominal', 'cintura', 'cadera', 'musculo', 'viseral', 'act_fisica', 'pcb', 'pct', 'cmb', 'pcse', 'pcsi', 'grasa_corporal', 'agua', 'kcal', 'imc', 'comentarios'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

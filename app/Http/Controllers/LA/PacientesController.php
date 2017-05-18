@@ -22,8 +22,8 @@ use App\Models\Paciente;
 class PacientesController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'paciente_carrera';
-	public $listing_cols = ['id', 'nombre_de_paciente', 'codigo_de_paciente', 'paciente_carrera'];
+	public $view_col = 'codigo_de_paciente';
+	public $listing_cols = ['id', 'nombre_de_paciente', 'codigo_de_paciente', 'fecha_inicio_pacien', 'sexo', 'edad', 'fecha_nacimiento', 'lugar_nacimiento', 'domicilio_actual', 'estado_civil', 'correo', 'celular'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

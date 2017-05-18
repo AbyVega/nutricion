@@ -31,7 +31,7 @@ p {
 
 /* Links */
 a {
-    color: #3bc492;
+    color: #ffffff;
     word-wrap: break-word;
 
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -43,7 +43,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #c0392b;
+    color: #fce3e9;
     text-decoration: none;
     outline: 0;
 }
@@ -72,21 +72,21 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background-color: #34495e;
-	padding-top: 60px;
+	background-color: #fd85a1;
+	padding-top: 5px;
 }
 
 #headerwrap h1 {
-	margin-top: 30px;
+	margin-top: 5px;
 	color: white;
-	font-size: 70px;
+	font-size: 30px;
 	
 }
 
 #headerwrap h3 {
 	color: white;
-	font-size: 30px;
-    line-height: 40px;
+	font-size: 15px;
+    line-height: 20px;
 }
 
 #headerwrap h5 {
@@ -108,14 +108,14 @@ a:after {
 }
 
 #features {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #features .ac a{
 	font-size: 20px;
 }
-
+ 
 /* Showcase Wrap */
 
 #showcase {
@@ -174,4 +174,10 @@ ol.features li {
 }
 .contact-link i {
 	margin-right: 7px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #ff3a8e;
+    border-color: #ffffff;
 }

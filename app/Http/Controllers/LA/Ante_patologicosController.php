@@ -22,8 +22,8 @@ use App\Models\Ante_patologico;
 class Ante_patologicosController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'enfermedades_impor';
-	public $listing_cols = ['id', 'enfermedades_impor', 'alergias', 'quirurgico', 'farmacos_suplementos', 'transtornos', 'cronico_hereditario', 'gastrointestinal'];
+	public $view_col = 'codigo_paciente';
+	public $listing_cols = ['id', 'codigo_paciente', 'enfermedades_impor', 'alergias', 'quirurgico', 'farmacos_suplementos', 'transtornos', 'cronico_hereditario', 'gastrointestinal'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

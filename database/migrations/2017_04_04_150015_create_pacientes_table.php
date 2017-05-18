@@ -17,10 +17,19 @@ class CreatePacientesTable extends Migration
      */
     public function up()
     {
-        Module::generate("Pacientes", 'pacientes', 'paciente_carrera', 'fa-optin-monster', [
-            ["nombre_de_paciente", "Nombre", "TextField", false, "nombre", 5, 15, true],
-            ["codigo_de_paciente", "Codigo", "TextField", false, "codigo", 9, 9, true],
-            ["paciente_carrera", "nombre de la carrera", "Multiselect", false, "Seleccione Carrera", 0, 0, true, "@carreras"],
+        Module::generate("Pacientes", 'pacientes', 'codigo_de_paciente', 'fa-optin-monster', [
+            ["nombre_de_paciente", "Nombre", "TextField", false, "Nombre", 5, 50, true],
+            ["codigo_de_paciente", "Codigo", "TextField", false, "Codigo", 9, 9, true],
+            ["paciente_carrera", "Carrera", "Dropdown", false, "Seleccione", 0, 0, false, "@carreras"],
+            ["fecha_inicio_pacien", "Fecha de Inicio", "Date", false, "", 0, 0, true],
+            ["sexo", "Sexo", "Dropdown", false, "", 0, 0, false, ["Hombre","Mujer"]],
+            ["edad", "Edad", "Decimal", false, "19", 2, 2, false],
+            ["fecha_nacimiento", "Fecha de Nacimiento", "Date", false, "", 0, 0, false],
+            ["lugar_nacimiento", "Lugar de Nacimiento", "Name", false, "Ciudad ", 0, 256, false],
+            ["domicilio_actual", "Domicilio actual", "Address", false, "Domicilio", 0, 256, false],
+            ["estado_civil", "Edo. Civil", "Dropdown", false, "seleccione", 0, 0, false, ["Soltero","Casado","Divorciado","Union libre","Viudo"]],
+            ["correo", "Correo", "Email", true, "mail@gmail.com", 0, 256, false],
+            ["celular", "Celular", "Mobile", false, "", 0, 20, false],
         ]);
 		
 		/*
